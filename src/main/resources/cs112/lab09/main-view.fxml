@@ -1,16 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="cs112.lab09.controllers.MainController">
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="481.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.lab09.controllers.MainController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label fx:id="welcomeText" alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="230.0" text="Revising History Interactive Map" textAlignment="CENTER">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font></Label>
+   <Label fx:id="welcomeText1" alignment="CENTER" prefHeight="26.0" prefWidth="150.0" text="Red Summer Edition">
+      <font>
+         <Font name="Arial Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label fx:id="welcomeText11" layoutX="196.0" layoutY="323.0" prefHeight="196.0" prefWidth="322.0" text="In 1919, Red Summer was a pattern of white-on-black violence that occurred in more than three dozen cities across the United States and in one rural county in Arkansas. The term &quot;Red Summer&quot; was coined by civil rights activist and author James Weldon Johnson, who had been employed as a field secretary by the NAACP scince 1916. It was branded &quot;Red Summer&quot; because of the bloodshed that occurred during the worst white-on-black violence in U.S. history." wrapText="true" />
+   <ImageView fitHeight="266.0" fitWidth="348.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../images/Red-Summer.jpg" />
+      </image>
+   </ImageView>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+      <children>
+          <Button id="startButton" fx:id="startButton" alignment="CENTER" onAction="#onStartButtonClick" text="Start" textAlignment="CENTER">
+            <font>
+               <Font name="Arial Bold" size="16.0" />
+            </font>
+         </Button>
+         <Button id="quitButton" fx:id="quitButton" onAction="#onQuitButtonClick" text="Quit">
+            <font>
+               <Font name="Arial Bold" size="16.0" />
+            </font>
+         </Button>
+      </children>
+   </HBox>
 </VBox>
